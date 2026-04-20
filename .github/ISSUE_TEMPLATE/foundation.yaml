@@ -2,6 +2,18 @@ name: "🔧 基盤改善"
 description: "技術的な改善・インフラ・パフォーマンスなどの改善テーマ"
 labels: ["foundation"]
 body:
+  - type: textarea
+    id: notion
+    attributes:
+      label: Notionリンク
+      description: |
+        関連するNotionチケット・ドキュメントのリンクがあれば貼る（任意）。
+        複数ある場合は1行1URLで記載する。
+      placeholder: |
+        https://www.notion.so/...
+    validations:
+      required: false
+
   - type: dropdown
     id: area
     attributes:
