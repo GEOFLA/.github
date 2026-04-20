@@ -1,0 +1,42 @@
+name: "🔧 基盤改善"
+description: "技術的な改善・インフラ・パフォーマンスなどの改善テーマ"
+labels: ["foundation"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: 関連する領域
+      description: わからなければ「未定」でOKです
+      options:
+        - Client（アプリ側）
+        - Server（サーバー側）
+        - Infra（インフラ）
+        - 未定
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 何が課題か
+      placeholder: |
+        例：S3バケットが手動管理されており、設定変更の履歴が追えない
+    validations:
+      required: true
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: どうなっていたいか
+      placeholder: |
+        例：S3をTerraform管理に移行し、変更がコードレビューを経る状態にする
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: 補足・参考情報
+      description: 関連URL、調査メモ、スクリーンショットなど
+    validations:
+      required: false

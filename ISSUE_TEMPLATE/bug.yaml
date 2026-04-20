@@ -1,0 +1,62 @@
+name: "🐛 バグ報告"
+description: "不具合・意図しない挙動の報告"
+labels: ["bug"]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: 何が起きているか
+      placeholder: |
+        例：地図でピンをタップするとアプリが落ちる
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 再現手順
+      placeholder: |
+        1. ホーム画面から地図タブを開く
+        2. 任意のピンをタップ
+        3. ポイント詳細が表示された直後にクラッシュ
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 本来どうなるべきか
+      placeholder: |
+        例：ポイント詳細が表示され、正常に操作できる
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: 発生環境
+      options:
+        - Android
+        - iOS
+        - 両方
+        - サーバー / その他
+    validations:
+      required: true
+
+  - type: textarea
+    id: env-detail
+    attributes:
+      label: 環境の詳細
+      description: 端末名、OSバージョン、アプリバージョンなど（わかる範囲でOK）
+      placeholder: |
+        例：Pixel 7a / Android 14 / Prally v3.2.1
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: 補足
+      description: スクリーンショット、ログ、関連URLなど
+    validations:
+      required: false
