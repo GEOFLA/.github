@@ -1,0 +1,21 @@
+name: "📋 Claude Task Request"
+description: "Ask Claude to implement a task and open a PR"
+title: "@claude | "
+labels: ["claude-task", "bot"]
+
+body:
+  - type: textarea
+    id: spec
+    attributes:
+      label: 📚 詳細仕様
+      render: markdown
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: ✅ 受け入れ条件
+      render: markdown
+    validations:
+      required: true
